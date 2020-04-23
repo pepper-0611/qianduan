@@ -1,0 +1,23 @@
+<!-- 
+    v-bind 用于绑定元素的属性与vue对象中的变量
+    v-bind:attritute 一般缩写为 :attritute
+    v-bind 中可以执行js表达式
+-->
+
+<head>
+    <script src="../../lib/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" :value="msg">
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                msg: 'i have a gift'
+            }
+        });
+    </script>
+</body>

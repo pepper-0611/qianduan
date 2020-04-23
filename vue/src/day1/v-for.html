@@ -1,0 +1,37 @@
+<head>
+    <script src="../lib/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p v-for="(item, i) in list">索引{{i}}, 值{{item}}</p>
+        <p v-for="(user, i) in users"> 第{{i}}个user的id是{{user.id}},name是{{user.name}}</p>
+        <p v-for="(val, key) in user"> user对象的属性{{key}}的值是{{val}}</p>
+        <p v-for="count in 10">这是第{{count}}个数字</p> <!-- 从1开始 -->
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                list: [1, 2, 3, 4, 5, 6],
+                users: [{
+                        id: 1,
+                        name: 'xiaojiang'
+                    },
+                    {
+                        id: 2,
+                        name: 'oudan'
+                    }
+                ],
+                user: {
+                    id: 3,
+                    name: '王一博',
+                    age: 18
+                }
+            },
+            methods: {}
+        });
+    </script>
+
+</body>

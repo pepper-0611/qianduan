@@ -1,0 +1,52 @@
+<!-- 
+事件修饰符
+默认为冒泡
+
+.stop 阻止冒泡
+.prevent 阻止默认事件 ？ 
+.capature 事件捕获
+.self 只有当事件在元素自身时生效
+.once 绑定的事件只执行一次
+-->
+
+<head>
+    <script src="../../lib/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div @click="divClick">
+            <input type="button" value="button" @click.stop="buttonClick">
+            <a href="http://www.baidu.com" @click.prevent="linkclick">度娘你还不喜欢吗！</a>
+        </div>
+        <br />
+        <div @click.capture="divClick">
+            <input type="button" value="button" @click="buttonClick">
+        </div>
+        <br/>
+        <div @click.self="divClick">
+            <input type="button" value="button" @click="buttonClick">
+        </div>
+        <br/>
+        <div @click="divClick">
+            <input type="button" value="button" @click.once="buttonClick">
+        </div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            methods: {
+                divClick() {
+                    alert("div click");
+                },
+                buttonClick() {
+                    alert("button click");
+                },
+                linkclick() {
+                    alert("click link!!");
+                }
+            }
+        })
+    </script>
+</body>

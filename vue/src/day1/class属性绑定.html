@@ -1,0 +1,50 @@
+<head>
+    <script src="../lib/vue.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .thin {
+            font-weight: 200;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .active {
+            letter-spacing: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1 class="red italic thin"> -->
+    <!-- v-bind 作数据绑定，直接传数组 <h1 :class="['red','italic','thin','active']"> -->
+    <!-- v-bind 中使用三元表达式 <h1 :class="['red','italic','thin',flag ? 'active' : '']"> -->
+    <!-- v-bind 中使用对象 <h1 :class="{red:true,italic:true,thin:true,active:true}"> -->
+    <!-- v-bind 中使用对象 对象定义到vue的data属性中 -->
+    <div id="app">
+        <h1 :class="classObject">
+            今天好帅，为什么要这么帅！！
+        </h1>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                flag: false,
+                classObject: {
+                    red: true,
+                    italic: true,
+                    thin: true,
+                    active: false
+                }
+            },
+            methods: {}
+        });
+    </script>
+
+</body>

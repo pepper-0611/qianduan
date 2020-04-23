@@ -1,0 +1,27 @@
+<head>
+    <script src="../lib/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <input type="button" value="reverse" @click="reverse">
+        <!-- 用删除和创建元素实现 -->
+        <h3 v-if="flag">天空很蓝</h3>
+        <!-- 用display:none style属性实现 -->
+        <h3 v-show="flag">天空很蓝蓝蓝</h3>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                flag: true
+            },
+            methods: {
+                reverse() {
+                    this.flag = !this.flag;
+                }
+            }
+        })
+    </script>
+</body>

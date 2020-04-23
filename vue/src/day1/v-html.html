@@ -1,0 +1,22 @@
+<!-- 
+    v-html 覆盖元素中原有内容,解析为html文本，
+    而v-text 只解析为普通文本
+-->
+
+<head>
+    <script src="../../lib/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p v-html="msg">========</p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                msg: '<h1>我是小红帽</h1>'
+            }
+        });
+    </script>
+</body>

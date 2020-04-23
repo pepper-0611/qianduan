@@ -1,0 +1,31 @@
+
+<!-- 
+  用于解决屏幕闪动的问题。
+  如果网络较慢，网页还在加载vue.js，导致vue来不及渲染，这时页面展示的就是源代码。
+-->
+
+<head>
+    <style>
+        [v-cloak] {
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hello">
+        <p v-cloak>
+            {{ msg }}
+        </p>
+    </div>
+    <script src="../../lib/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '.hello',
+            data: {
+                msg: '欢迎来到我的世界',
+            },
+            methods: {}
+        });
+    </script>
+</body>

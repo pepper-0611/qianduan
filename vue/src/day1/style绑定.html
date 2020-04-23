@@ -1,0 +1,31 @@
+<head>
+    <script src="../lib/vue.js"></script>
+</head>
+
+<body>
+    <!-- 内联样式绑定 -->
+    <!-- v-bind <h1 :style="{color:'red', 'font-weight':400}"> -->
+    <!-- v-bind 中使用vue中的data 对象-->
+    <!-- 数组-->
+    <div id="app">
+        <h1 :style="[h1style1, h1style2]">
+            我很帅！！
+        </h1>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                h1style1: {
+                    color: 'red',
+                    'font-weight': 400
+                },
+                h1style2:{
+                    'font-style': 'italic'
+                }
+            },
+            methods: {}
+        });
+    </script>
+
+</body>

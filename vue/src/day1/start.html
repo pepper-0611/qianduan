@@ -1,0 +1,17 @@
+<head>
+    <script src="../lib/vue.js"></script>
+</head>
+
+<body>
+    <div id="welcome">
+        <p>{{ msg }}</p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#welcome',
+            data: {
+                msg: '欢迎来到我的世界'
+            }
+        });
+    </script>
+</body>

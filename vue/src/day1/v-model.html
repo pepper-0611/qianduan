@@ -1,0 +1,22 @@
+<head>
+    <script src="../../lib/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="msg">
+        <br/>
+        <input type="text" :value="msg">
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                msg:"我好帅哦"
+            }
+
+
+        })
+    
+    </script>
+</body>

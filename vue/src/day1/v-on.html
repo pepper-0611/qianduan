@@ -1,0 +1,24 @@
+<!-- 
+    v-on 提供事件绑定机制
+    v-on:event 可以缩写为 @event 
+-->
+
+<head>
+    <script src="../../lib/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="这个一个button" @click="alert">
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            methods: {
+                alert: function () {
+                    alert("哈哈哈哈哈");
+                }
+            }
+        });
+    </script>
+</body>
