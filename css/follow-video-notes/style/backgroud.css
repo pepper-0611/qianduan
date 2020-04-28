@@ -1,0 +1,23 @@
+/**
+背景颜色：background-color；
+背景图片：background-image: url(../img/logo.png);
+是否重复：background-repeat: no-repeat;
+背景图片的位置：background-position: right bottom;(x轴，y轴）
+背景图片是否随着位置滚动：background-attachment: fixed;
+背景大小：background-size: 100px 100px;
+**/
+body {
+    background-color: gray;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-size: 100px 100px;
+}
+
+p {
+    background-color: red;
+    width: 100px;
+    padding: 10px;
+    height: 5000px;
+}

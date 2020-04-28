@@ -1,0 +1,23 @@
+/**
+链接的4种状态
+未被点击状态：a:link
+已经被点击过：a:visited
+鼠标放在上面：a:hover
+正在点击：a:active
+**/
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: gray;
+}
+
+a:hover {
+    color: green;
+}
+
+a:active {
+    color: red;
+}

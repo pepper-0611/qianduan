@@ -1,0 +1,15 @@
+/**
+font-family
+font-size
+font-style
+font-weight
+自定义字体：@font-face
+**/
+p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+@font-face{
+    font-family: myfont;
+    src:url();
+}

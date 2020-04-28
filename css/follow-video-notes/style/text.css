@@ -1,0 +1,19 @@
+/**
+文本颜色：color
+文本对齐方式：text-align
+文本首行缩进：text-indent
+文本格式化(全部小写、首字母小写等）text-transform: lowercase;
+**/
+
+.align p {
+    color: red;
+    text-align: center;
+}
+
+.indent p {
+    text-indent: 2em;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}

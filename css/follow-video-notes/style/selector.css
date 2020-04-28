@@ -1,0 +1,46 @@
+/**
+1. 派生选择器 li strong
+2. 同一个元素同一个属性多个样式，就近原则。
+3. id选择器用#号表示
+4. id选择器 + 派生选择器 #pid strong
+5. 类选择器用.表示
+6. 类选择器 + 派生选择器
+7. 属性选择器 & 属性和值选择器
+
+**/
+strong {
+    color: blue;
+}
+
+li strong {
+    color: green;
+}
+
+#pid {
+    color: red;
+}
+
+#pid strong {
+    color: blue;
+    font-size: 100px;
+}
+
+.divClass {
+    color: rgb(199, 50, 50);
+}
+
+.divClass a {
+    font-size: 50px;
+}
+
+[boy] {
+    color: gray;
+}
+
+[boy=yes] {
+    font-size: 100px;
+}
+
+[boy=no] {
+    font-size: 50px;
+}
