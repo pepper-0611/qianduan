@@ -1,0 +1,22 @@
+/**
+1. 外边框 border: 1px solid black;
+2. 折叠边框  border-collapse: collapse;
+3. 表格宽高 width & height
+4. 文本对齐 text-align
+5. 背景颜色 
+6. 内边距 padding
+**/
+
+#tb th,
+#tb td {
+    border: 1px solid black;
+    /* text-align: center; */
+    background-color: aqua;
+    padding: 10px;
+}
+
+#tb {
+    border-collapse: collapse;
+    /* width: 400px;
+    height: 400px; */
+}

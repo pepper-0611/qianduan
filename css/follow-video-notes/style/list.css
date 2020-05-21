@@ -1,0 +1,8 @@
+/**
+1.list-style-type 列表项
+2.list-style-image 列表项图片
+**/
+
+ul li {
+    list-style-type: circle;
+}
