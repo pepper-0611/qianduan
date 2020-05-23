@@ -1,0 +1,26 @@
+/**
+1. 盒子模型核心 content height width
+padding(内边距) border(边框) margin（外边距）
+2. padding padding-left/right/bottom/top
+3. 边框的样式 border-style
+4. 单边框样式 border-top-style
+5. 边框的宽度 border-width OR border-top-width
+
+
+6. margin
+7. 外边距自动合并
+**/
+
+
+td {
+    padding: 10px
+}
+
+.div1 {
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: aqua;
+    width: 100px;
+    text-align: center;
+}
+
