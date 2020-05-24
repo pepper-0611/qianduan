@@ -23,6 +23,10 @@
                         <input type="text" class="form-control" v-model="name">
                     </label>
                     <input type="button" value="添加" class="btn btn-primary" @click="add()">
+                    <label>
+                        关键词搜索:
+                        <input type="text" class="form-control" v-model="keywords" />
+                    </label>
                 </div>
             </div>
         </div>
@@ -37,7 +41,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in list">
+                <tr v-for="item in search(keywords)">
                     <td>{{item.id}}</td>
                     <td>{{item.name}}</td>
                     <td>{{item.date}}</td>
@@ -64,7 +68,8 @@
                     }
                 ],
                 id: '',
-                name: ''
+                name: '',
+                keywords: ''
             },
             methods: {
                 add() {
@@ -84,12 +89,25 @@
                     //     }
                     // })
 
-                    var index = this.list.findIndex((item) =>{
-                        if(item.id == id){
+                    var index = this.list.findIndex((item) => {
+                        if (item.id == id) {
                             return true;
                         }
                     });
                     this.list.splice(index, 1);
+                },
+                search(keywords) {
+                    // var newList = [];
+                    // this.list.forEach(item => {
+                    //     if(item.name.indexOf(keywords) != -1){
+                    //         newList.push(item);
+                    //     }
+                    // });
+                    // return newList;
+
+                    return this.list.filter(item => {
+                        return item.name.includes(keywords);
+                    })
                 }
             }
         })
