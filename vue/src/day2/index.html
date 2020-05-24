@@ -43,7 +43,7 @@
                 <tr v-for="item in search(keywords)">
                     <td>{{item.id}}</td>
                     <td>{{item.name}}</td>
-                    <td>{{item.date}}</td>
+                    <td>{{item.date | dateFormat}}</td>
                     <td><a href="" @click.prevent="del(item.id)">删除</a></td>
                 </tr>
             </tbody>
@@ -52,6 +52,13 @@
 
 
     <script>
+        Vue.filter('dateFormat', function(dateInput){
+            var date = new Date(dateInput);
+            var y = date.getFullYear();
+            var m = date.getMonth() + 1;
+            var d = date.getDay() + 1;
+            return `${y}-${m}-${d}`;
+        });
         var vm = new Vue({
             el: "#app",
             data: {
