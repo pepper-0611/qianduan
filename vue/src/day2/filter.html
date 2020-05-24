@@ -5,7 +5,7 @@
             return msg.replace(/美好/g, arg);
         });
 3. 使用 {{msg | msgFormat1(args) | msgFormat2(args)}}
-
+4. 私有过滤器定义在vm对象的filters属性下面
 -->
 <script src="../../lib/vue.js"></script>
 </head>
@@ -13,22 +13,27 @@
 <body>
     <div id="app">
         {{msg | msgFormat1('糟糕') | msgFormat2}}
+        {{msg | strFormat}}
     </div>
     <script>
-        Vue.filter('msgFormat1', function(msg, arg){
+        Vue.filter('msgFormat1', function (msg, arg) {
             return msg.replace(/美好/g, arg);
         });
-        Vue.filter('msgFormat2', function(msg){
+        Vue.filter('msgFormat2', function (msg) {
             return msg + 'second formator';
         })
         var vm = new Vue({
             el: "#app",
             data: {
                 msg: "今天很美好"
+            },
+            filters: {
+                strFormat:function(msg){
+                    return msg + 1;
+                }
             }
         });
     </script>
-
 </body>
 
 </html>

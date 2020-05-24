@@ -55,8 +55,8 @@
         Vue.filter('dateFormat', function(dateInput){
             var date = new Date(dateInput);
             var y = date.getFullYear();
-            var m = date.getMonth() + 1;
-            var d = date.getDay() + 1;
+            var m = (date.getMonth() + 1).toString().padStart(2, '0');
+            var d = (date.getDay() + 1).toString().padStart(2, '0');
             return `${y}-${m}-${d}`;
         });
         var vm = new Vue({
