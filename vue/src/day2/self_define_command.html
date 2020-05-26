@@ -1,6 +1,8 @@
 <html>
 <!--
-   
+   自定义命令，根据vue提供的钩子函数
+   1. bind钩子函数是在内存中执行的，放样式相关的逻辑
+   2. inserted钩子函数是在页面执行的，放js的逻辑
 -->
 
 <head>
@@ -9,18 +11,29 @@
 
 <body>
     <div id="app">
-        <input type="text" value="to input" v-focus />
+        <input type="text" value="to input" v-focus v-color="'green'" />
     </div>
 
     <script>
         Vue.directive('focus', {
-            bind: function () {},
-            inserted: function (e1) {
-                e1.focus();
+            bind: function (el) {},
+            inserted: function (el) {
+                el.focus();
             }
-        })
+        });
+        Vue.directive('color', {
+            bind: function (el, binding) {
+                el.style.color = binding.value;
+            },
+            inserted: function (el) {
+                el.focus();
+            }
+        });
         var vm = new Vue({
-            el: '#app'
+            el: '#app',
+            directives: {
+
+            }
         })
     </script>
 </body>
