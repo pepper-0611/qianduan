@@ -1,0 +1,37 @@
+<html>
+<!--
+    1. 绑定键盘某个键的keyup keydown之类的事件
+      ep <input type="text" @keyup.enter="alert" value="11">
+    2. 这里的enter其实是vue定义的自定义按键修饰符（别名），当然也定义了一些其他的别名
+    3. 自定义按键修饰符
+
+
+-->
+<head>
+    <script src="../../lib/vue.js"></script>
+</head>
+
+<body>
+    <div id = "app">
+        <input type="text" @keyup.enter="alert" value="11">
+        <input type="text" @keyup.C ="alert" value="CC">
+    </div>
+
+    <script>
+        Vue.config.keyCodes.C = 67
+        var vm = new Vue({
+            el: "#app",
+            methods: {
+                alert: function () {
+                    alert("哈哈哈");
+                }
+            }
+        })
+    </script>
+
+</body>
+
+
+
+
+</html>
